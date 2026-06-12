@@ -10,7 +10,7 @@ hl.monitor({
 -- overwrite for dp-1
 
 hl.monitor({
-	output = "dp-1",
+	output = "DP-1",
 	mode = "2560x1440@170",
 	position = "auto",
 	scale = 1

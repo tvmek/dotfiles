@@ -8,4 +8,3 @@ require("colors")
 require("looknfeel")
 require("keybindings")
 require("windowrules")
-
