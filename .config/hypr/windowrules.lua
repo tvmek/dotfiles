@@ -38,3 +38,20 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.config({
+	general = {
+		allow_tearing = true
+	},
+	render = {
+		cm_auto_hdr = 0
+	}
+})
+
+hl.window_rule({
+	name = "manage-mhw-window",
+	match = {
+		class = "MonsterHunterWilds.exe"
+	},
+	immediate = true,
+})
