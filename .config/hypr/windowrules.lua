@@ -55,3 +55,19 @@ hl.window_rule({
 	},
 	immediate = true,
 })
+
+hl.window_rule({
+	name = "manage-osu-window",
+	match = {
+		class = "osu-lazer"
+	},
+	immediate = true,
+})
+
+hl.window_rule({
+	name = "manage-dbd-window",
+	match = {
+		class = "DeadByDaylight-Win64-Shipping.exe"
+	},
+	immediate = true,
+})
