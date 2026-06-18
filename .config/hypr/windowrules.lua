@@ -50,7 +50,11 @@ hl.config({
 
 -- rules to add game content type to apps that dont have it themselves
 hl.window_rule({ match = { initial_title = "osu!" }, content = "game" })
---hl.window_rule({ match = { class = "my-window" }, border_size = 10 })
+--hl.window_rule({ match = { class = "my-window" }, content = "" })
+
+-- rules to add video content type to apps that dont have it themselves
+hl.window_rule({ match = { class = "firefox-developer-edition" }, content = "video" })
+
 
 hl.window_rule({
 	name = "game-no-vsync",
@@ -67,3 +71,12 @@ hl.window_rule({
 	},
 	no_screen_share = true,
 })
+
+hl.window_rule({
+	name = "video-no-transparency",
+	match = {
+		content = "video"
+	},
+	opacity = "1.0 override",
+})
+

@@ -63,3 +63,6 @@ hl.config({
 	}
 })
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("kitty --class clipse -e clipse", { float = true, size = {622, 652}, stay_focused = true }))
+
+-- F keys binds
+hl.bind("F11", hl.dsp.window.fullscreen({ action = "toggle" }))
