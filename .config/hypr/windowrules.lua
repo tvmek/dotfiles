@@ -49,25 +49,9 @@ hl.config({
 })
 
 hl.window_rule({
-	name = "manage-mhw-window",
+	name = "game-no-vsync",
 	match = {
-		class = "MonsterHunterWilds.exe"
-	},
-	immediate = true,
-})
-
-hl.window_rule({
-	name = "manage-osu-window",
-	match = {
-		class = "osu-lazer"
-	},
-	immediate = true,
-})
-
-hl.window_rule({
-	name = "manage-dbd-window",
-	match = {
-		class = "DeadByDaylight-Win64-Shipping.exe"
+		content = "game"
 	},
 	immediate = true,
 })
