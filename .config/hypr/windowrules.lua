@@ -48,6 +48,10 @@ hl.config({
 	}
 })
 
+-- rules to add game content type to apps that dont have it themselves
+hl.window_rule({ match = { initial_title = "osu!" }, content = "game" })
+--hl.window_rule({ match = { class = "my-window" }, border_size = 10 })
+
 hl.window_rule({
 	name = "game-no-vsync",
 	match = {
@@ -55,3 +59,12 @@ hl.window_rule({
 	},
 	immediate = true,
 })
+
+hl.window_rule({
+	name = "discord-censor",
+	match = {
+		class = "webcord"
+	},
+	no_screen_share = true,
+})
+
