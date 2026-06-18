@@ -83,15 +83,15 @@
         "format-disconnected": "",
         "format-wifi": "",
         "format-ethernet": "",
-        "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
-        "menu": "on-click-right",
-        "menu-file": "~/.config/waybar/context/network.xml",
-        "menu-actions": {
-  			"action-1": "nmcli radio wifi off",
-  			"action-2": "nmcli radio wifi on",
-            "action-3": "hyprctl eval \"hl.exec_cmd('alacritty -e nmtui')\"",
-            "action-4": "hyprctl eval \"hl.exec_cmd('nm-connection-editor')\""
-  		}
+        "tooltip-format": "{bandwidthUpBytes}   {bandwidthDownBytes}",
+//        "menu": "on-click-right",
+//        "menu-file": "~/.config/waybar/context/network.xml",
+//        "menu-actions": {
+//  			"action-1": "nmcli radio wifi off",
+//  			"action-2": "nmcli radio wifi on",
+//            "action-3": "hyprctl eval \"hl.exec_cmd('alacritty -e nmtui')\"",
+//            "action-4": "hyprctl eval \"hl.exec_cmd('nm-connection-editor')\""
+//  		}
     },
 
     "clock": {
@@ -104,11 +104,11 @@
             "weeks-pos": "right",
             "mode-mon-col": 3,
             "format": {
-                "months":   "<span color='#acb0d0'><b>{}</b></span>",
-                "weeks":    "<span color='#7aa2f7'><b>W{}</b></span>",
+                "months":   "<span color='#b0b0b0'><b>{}</b></span>",
+                "weeks":    "<span color='#f77a7a'><b>W{}</b></span>",
                 "weekdays": "<span color='#e0af68'><b>{}</b></span>",
-                "days":     "<span color='#acb0d0'><b>{}</b></span>",
-                "today":    "<span color='#41a6b5'><b><u>{}</u></b></span>"
+                "days":     "<span color='#b0b0b0'><b>{}</b></span>",
+                "today":    "<span color='#b54141'><b><u>{}</u></b></span>"
             }
         }
     },

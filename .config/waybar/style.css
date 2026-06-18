@@ -133,7 +133,11 @@
 } */
 
 #workspaces button:hover {
-    background: transparent;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    transition: none;
 }
 
 #mpris.paused {

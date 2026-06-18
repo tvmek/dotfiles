@@ -14,22 +14,22 @@
         ]
     },
 
-    "group/left-hidden" : {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 500,
-            "transition-left-to-right": false,
-            "click-to-reveal": true
-        },
-        "modules" : [
-            "custom/arrow-right", "cpu", "load"
-        ]
-    },
+//    "group/left-hidden" : {
+//        "orientation": "horizontal",
+//        "drawer": {
+//            "transition-duration": 500,
+//            "transition-left-to-right": false,
+//            "click-to-reveal": true
+//        },
+//        "modules" : [
+//            "custom/arrow-right", "cpu", "load"
+//        ]
+//    },
 
-    "group/left-hidden-top" : {
-        "orientation": "horizontal",
-        "modules" : [ "group/left-hidden" ]
-    },
+//    "group/left-hidden-top" : {
+//        "orientation": "horizontal",
+//        "modules" : [ "group/left-hidden" ]
+//    },
 
     "group/right" : {
         "orientation": "horizontal",
@@ -46,7 +46,7 @@
             "click-to-reveal": true
         },
         "modules" : [
-            "custom/arrow-left", "memory"
+            "custom/arrow-left", "memory", "cpu", "load"
         ]
     },
 
@@ -55,7 +55,7 @@
         "modules" : [ "group/right-hidden" ]
     },
 
-    "modules-left"   : ["group/left-hidden-top", "group/left"],
+    "modules-left"   : ["group/left"],
     "modules-center" : ["clock"],
     "modules-right"  : [ "group/right",  "group/right-hidden-top"],
 
