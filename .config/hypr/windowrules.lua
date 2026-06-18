@@ -50,10 +50,12 @@ hl.config({
 
 -- rules to add game content type to apps that dont have it themselves
 hl.window_rule({ match = { initial_title = "osu!" }, content = "game" })
+hl.window_rule({ match = { class = "PPSSPPSDL" }, content = "game" })
 --hl.window_rule({ match = { class = "my-window" }, content = "" })
 
 -- rules to add video content type to apps that dont have it themselves
 hl.window_rule({ match = { class = "firefox-developer-edition" }, content = "video" })
+hl.window_rule({ match = { class = "PPSSPPDSL" }, content = "game" })
 
 
 hl.window_rule({
@@ -62,6 +64,7 @@ hl.window_rule({
 		content = "game"
 	},
 	immediate = true,
+	opacity = "1.0 override",
 })
 
 hl.window_rule({
