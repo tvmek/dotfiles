@@ -67,3 +67,33 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("kitty --class clipse -e clipse", { f
 
 -- F keys binds
 hl.bind("F11", hl.dsp.window.fullscreen({ action = "toggle" }))
+
+-- game mode
+hl.bind(mainMod .. " + G", function ()
+    local game_mode = (hl.get_config("animations.enabled") == false)
+
+    if game_mode then
+        hl.exec_cmd("hyprctl reload")
+        return
+    end
+    
+    hl.config({
+        general = {
+            gaps_in = 0, gaps_out = 0, -- Disable gaps  
+            border_size = 0,
+        },
+
+        animations = {
+            enabled = false, -- Disable animations
+        },
+        
+        -- Disable blur, shadow and window rounding
+        decoration = {
+            shadow = { enabled = false },
+            blur = { enabled = false },
+            rounding = 0,
+	    active_opacity   = 1.0,
+	    inactive_opacity = 1.0,
+        }
+    })
+end)
