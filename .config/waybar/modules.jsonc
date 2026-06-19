@@ -82,7 +82,7 @@
         "format-disabled": "",
         "format-disconnected": "",
         "format-wifi": "",
-        "format-ethernet": "󰈁",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{bandwidthUpBytes}   {bandwidthDownBytes}"
 //        "menu": "on-click-right",
 //        "menu-file": "~/.config/waybar/context/network.xml",
