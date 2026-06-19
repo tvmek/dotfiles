@@ -55,7 +55,7 @@ hl.window_rule({ match = { class = "PPSSPPSDL" }, content = "game" })
 
 -- rules to add video content type to apps that dont have it themselves
 hl.window_rule({ match = { class = "firefox-developer-edition" }, content = "video" })
-hl.window_rule({ match = { class = "PPSSPPDSL" }, content = "game" })
+hl.window_rule({ match = { class = "com.obsproject.Studio" }, content = "video" })
 
 
 hl.window_rule({
