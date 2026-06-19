@@ -27,8 +27,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background: url("../../../../.cache/ml4w/hyprland-dotfiles/blurred_wallpaper.png");
-	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.5);
 	font-size: 16pt;
 }
 
@@ -56,7 +55,7 @@ button:focus {
 button:hover {
     background-color: alpha(@primary, 0.9);;
 	opacity: 0.8;
-    color: @on_primary;
+    color: rgba(0, 0, 0, 0);
     background-size: 30%;
     margin: 30px;
     border-radius: 80px;
