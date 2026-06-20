@@ -57,7 +57,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- Screenshot with grim and slurp
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
--- clipboard with fuzzel and cliphist
+-- clipboard with clipse
 hl.config({
 	misc = {
 		middle_click_paste = false
@@ -74,7 +74,8 @@ hl.bind(mainMod .. " + G", function ()
 
     if game_mode then
         hl.exec_cmd("hyprctl reload")
-        return
+	hl.exec_cmd("hyprpaper & waybar")
+	return
     end
     
     hl.config({
@@ -96,4 +97,7 @@ hl.bind(mainMod .. " + G", function ()
 	    inactive_opacity = 1.0,
         }
     })
+
+    -- Disable waybar and hyprpaper
+    hl.exec_cmd("killall waybar & killall hyprpaper")
 end)
