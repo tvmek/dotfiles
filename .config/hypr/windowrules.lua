@@ -51,6 +51,7 @@ hl.config({
 -- rules to add game content type to apps that dont have it themselves
 hl.window_rule({ match = { initial_title = "osu!" }, content = "game" })
 hl.window_rule({ match = { class = "PPSSPPSDL" }, content = "game" })
+hl.window_rule({ match = { class = "cs2" }, content = "game" })
 --hl.window_rule({ match = { class = "my-window" }, content = "" })
 
 -- rules to add video content type to apps that dont have it themselves
