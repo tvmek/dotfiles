@@ -3,9 +3,9 @@
     monitor = 0
     follow = mouse
     width = 300
-    height = (0, 300)
+    height = (100, 300)
     origin = top-right
-    offset = (10, 10)
+    offset = (20, 20)
     scale = 0
     notification_limit = 0
 
@@ -29,7 +29,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = CaskaydiaCove Nerd Font Mono 10
+    font = CaskaydiaCove Nerd Font Mono 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -41,13 +41,13 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
+    show_indicators = false
 
     ### Icons ###
     icon_position = left
     min_icon_size = 0
-    max_icon_size = 32
-    icon_path = /home/ty/.local/share/icons/Tela-circle-black-light/16/status/:/home/ty/.local/share/icons/Tela-circle-black-light/16/devices/
+    max_icon_size = 64
+    icon_path = /home/ty/.local/share/icons/Tela-circle-black-dark/scalable@2x/status/:/home/ty/.local/share/icons/Tela-circle-black-dark/scalable@2x/devices/
 
     ### History ###
     sticky_history = yes
