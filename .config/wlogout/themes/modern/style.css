@@ -45,13 +45,13 @@ button {
     min-width: 150px;
     min-height: 150px;	
 }
-
+/*
 button:focus {
 	background-color: alpha(@primary, 0.5);
     background-size: 25%;
 	border: 0px;
 }
-
+*/
 button:hover {
     background-color: alpha(@primary, 0.9);;
 	opacity: 0.8;

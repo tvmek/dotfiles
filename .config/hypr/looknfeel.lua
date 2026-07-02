@@ -30,6 +30,7 @@ hl.config({
         active_opacity   = 0.9,
         inactive_opacity = 0.9,
 	fullscreen_opacity = 1.0,
+	dim_special = 0.0,
 
         shadow = {
             enabled      = true,

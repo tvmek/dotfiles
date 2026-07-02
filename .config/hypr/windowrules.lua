@@ -45,6 +45,9 @@ hl.config({
 	},
 	render = {
 		cm_auto_hdr = 0
+	},
+	misc = {
+		vrr = 3
 	}
 })
 
@@ -52,11 +55,17 @@ hl.config({
 hl.window_rule({ match = { initial_title = "osu!" }, content = "game" })
 hl.window_rule({ match = { class = "PPSSPPSDL" }, content = "game" })
 hl.window_rule({ match = { class = "cs2" }, content = "game" })
+hl.window_rule({ match = { initial_title = "Blasphemous" }, content = "game" })
+hl.window_rule({ match = { initial_title = "Mindustry" }, content = "game" })
+hl.window_rule({ match = { title = "Genshin Impact" }, content = "game" })
 --hl.window_rule({ match = { class = "my-window" }, content = "" })
 
 -- rules to add video content type to apps that dont have it themselves
-hl.window_rule({ match = { class = "firefox-developer-edition" }, content = "video" })
+hl.window_rule({ match = { class = "firefox-developer-edition" }, content = "video", tag = "+censor" })
 hl.window_rule({ match = { class = "com.obsproject.Studio" }, content = "video" })
+
+-- misc
+hl.window_rule({ match = { class = "vesktop" }, tag = "+censor" })
 
 
 hl.window_rule({
@@ -68,13 +77,14 @@ hl.window_rule({
 	opacity = "1.0 override",
 })
 
-hl.window_rule({
-	name = "discord-censor",
+local windowCensor = hl.window_rule({
+	name = "window-censor",
 	match = {
-		class = "webcord"
+		tag = "censor"
 	},
 	no_screen_share = true,
 })
+windowCensor:set_enabled(false)
 
 hl.window_rule({
 	name = "video-no-transparency",
@@ -84,3 +94,20 @@ hl.window_rule({
 	opacity = "1.0 override",
 })
 
+-- Workspace rule for special:gromit
+hl.workspace_rule({
+    workspace = "special:gromit",
+    gaps_in = 0,
+    gaps_out = 0,
+    on_created_empty = "gromit-mpx -a"
+})
+
+-- Window rules for Gromit-mpx
+hl.window_rule({
+    match = { class = "Gromit-mpx" },
+    no_blur = true,
+    opacity = "1.0 override 1.0 override 1.0 override",
+    no_shadow = true,
+    suppress_event = "fullscreen", -- Handles nofullscreenrequest
+    size = { "(monitor_w)", "(monitor_h)" }
+})

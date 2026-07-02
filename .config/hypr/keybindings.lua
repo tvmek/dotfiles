@@ -12,7 +12,8 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("thunar"))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("fuzzel"))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+--hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + BACKSPACE", hl.dsp.exec_cmd("wlogout -p layer-shell --buttons-per-row 2"))
 
@@ -102,3 +103,8 @@ hl.bind(mainMod .. " + G", function ()
     -- Disable waybar and hyprpaper
     hl.exec_cmd("killall waybar & killall hyprpaper")
 end)
+
+-- Gromit Keybinds for Undo/Redo
+hl.bind(mainMod .. " + W", hl.dsp.workspace.toggle_special("gromit"))
+hl.bind("F8", hl.dsp.exec_cmd("gromit-mpx --undo"))
+hl.bind("SHIFT + F8", hl.dsp.exec_cmd("gromit-mpx --redo"))
